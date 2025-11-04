@@ -1,0 +1,72 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #f7f7f7;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: moveAround 10s linear infinite;
+  border-radius: 50%;
+}
+
+.circle:hover {
+  opacity: 0;
+}
+
+@keyframes moveAround {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: calc(100vw - 100px);
+  }
+  50% {
+    top: calc(100vh - 100px);
+    left: calc(100vw - 100px);
+  }
+  75% {
+    top: calc(100vh - 100px);
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+.loading {
+  width: 300px;
+  max-width: 640px;
+  height: 80px;
+  background: #e6e6e6;
+}
+
+.loading .fill {
+  height: 100%;
+  width: 0%;
+  background: green;
+  animation: loadFill 3s linear infinite;
+}
+
+@keyframes loadFill {
+  0% {
+    width: 0%;
+  }
+  70% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
